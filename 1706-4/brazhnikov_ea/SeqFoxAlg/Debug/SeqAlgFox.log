@@ -1,0 +1,6 @@
+﻿  Source.cpp
+D:\App\CProjects\SeqAlgFox\Source.cpp(59,6): warning C4101: rank: неиспользованная локальная переменная
+D:\App\CProjects\SeqAlgFox\Source.cpp(58,6): warning C4101: procNum: неиспользованная локальная переменная
+D:\App\CProjects\SeqAlgFox\Source.cpp(74,6): warning C4101: rank: неиспользованная локальная переменная
+D:\App\CProjects\SeqAlgFox\Source.cpp(74,12): warning C4101: procNum: неиспользованная локальная переменная
+  SeqAlgFox.vcxproj -> D:\App\CProjects\SeqAlgFox\Debug\SeqAlgFox.exe
