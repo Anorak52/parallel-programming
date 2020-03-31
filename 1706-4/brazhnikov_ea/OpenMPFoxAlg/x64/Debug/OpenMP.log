@@ -1,0 +1,4 @@
+﻿  Source.cpp
+D:\App\CProjects\OpenMP\Source.cpp(61,11): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+D:\App\CProjects\OpenMP\Source.cpp(96,16): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+  OpenMP.vcxproj -> D:\App\CProjects\OpenMP\x64\Debug\OpenMP.exe

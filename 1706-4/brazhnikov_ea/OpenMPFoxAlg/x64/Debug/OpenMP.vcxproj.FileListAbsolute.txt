@@ -1,0 +1,2 @@
+D:\App\CProjects\OpenMP\x64\Debug\OpenMP.exe
+D:\App\CProjects\OpenMP\x64\Debug\OpenMP.pdb
