@@ -1,2 +1,0 @@
-D:\App\CProjects\TBB\x64\Debug\TBB.exe
-D:\App\CProjects\TBB\x64\Debug\TBB.pdb
