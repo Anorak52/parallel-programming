@@ -1,0 +1,8 @@
+﻿  Source.cpp
+  TBB Warning: tbb/task_scheduler_init.h is deprecated. For details, please see Deprecated Features appendix in the TBB reference manual.
+  TBB Warning: tbb.h contains deprecated functionality. For details, please see Deprecated Features appendix in the TBB reference manual.
+Source.obj : error LNK2019: ссылка на неразрешенный внешний символ "void __cdecl tbb::assertion_failure(char const *,int,char const *,char const *)" (?assertion_failure@tbb@@YAXPBDH00@Z) в функции "public: __thiscall tbb::task_scheduler_init::task_scheduler_init(int,unsigned int)" (??0task_scheduler_init@tbb@@QAE@HI@Z)
+Source.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: void __thiscall tbb::task_scheduler_init::initialize(int,unsigned int)" (?initialize@task_scheduler_init@tbb@@QAEXHI@Z) в функции "public: __thiscall tbb::task_scheduler_init::task_scheduler_init(int,unsigned int)" (??0task_scheduler_init@tbb@@QAE@HI@Z)
+Source.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: void __thiscall tbb::task_scheduler_init::terminate(void)" (?terminate@task_scheduler_init@tbb@@QAEXXZ) в функции "public: __thiscall tbb::task_scheduler_init::~task_scheduler_init(void)" (??1task_scheduler_init@tbb@@QAE@XZ)
+D:\App\CProjects\TBB\tbb-2020.2-win\tbb\lib\intel64\vc14\tbb_debug.lib : warning LNK4272: тип компьютера библиотеки "x64" конфликтует с типом целевого компьютера "x86"
+D:\App\CProjects\TBB\Debug\TBB.exe : fatal error LNK1120: неразрешенных внешних элементов: 3
