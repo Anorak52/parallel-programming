@@ -1,1 +1,0 @@
-D:\App\GitRepo\parallel-programming\1706-4\brazhnikov_ea\SequentialFoxAlg\x64\Release\SeqAlgFox.exe
