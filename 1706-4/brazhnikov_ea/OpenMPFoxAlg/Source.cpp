@@ -7,13 +7,11 @@ using namespace std;
 
 void PrintMatrix(double* matrix, int N) {
 
-	int M = N;
 	for (int i = 0; i < N; i++) {
-		for (int j = 0; j < M; j++)
+		for (int j = 0; j < N; j++)
 		{
-			cout << matrix[i * M + j] << " ";
-			for (int k = 0; k < (5 - log10((double)(matrix[i * M + j]))); k++)
-				cout << " ";
+			cout.width(3);
+			cout << matrix[i * N + j] << " ";
 		}
 		cout << endl;
 	}
@@ -28,6 +26,19 @@ void MatrixCreate(double* A, double* B, double* C, double *CSeq, int size) {
 		CSeq[i] = 0;
 	}
 }
+
+bool matComparison(double* A, double* B, int size)
+{
+	for (int i = 0; i < size; i++) {
+		for (int j = 0; j < size; j++)
+		{
+			if (A[i * size + j] != B[i * size + j])
+				return false;
+		}
+	}
+	return true;
+}
+
 
 void Multiplication(double* Ablock, double* Bblock, double* Cblock, int _blockSize)
 {
@@ -78,12 +89,22 @@ int main(int argc, char* argv[])
 	double* B;
 	double* CSeq;
 	double* CFox;
+	int size, procNum;
+	double StartFoxAlg = 0, FinFoxAlg = 0, StartSeqAlg = 0, FinSeqAlg = 0; //time
 
-	double StartFoxAlg = 0, FinFoxAlg = 0, StartSeqAlg = 0, FinSeqAlg = 0; //время
+	cout << "input the size and then the procnun: " << endl;
 
-	int size = 16; //размер матрицы 
-	int procNum = 4; //количество процессов
-	int BlockSize = int(sqrt(procNum));  //размер сетки 
+	if (argc > 1) {
+		size = atoi(argv[1]);
+		procNum = atoi(argv[2]);
+	}
+	else {
+		cout << "Input the size of matrix and then procnum: " << endl;
+		cin >> size;
+		cin >> procNum;
+	}
+
+	int BlockSize = int(sqrt(procNum));
 
 	if (BlockSize * BlockSize == procNum && size % BlockSize == 0) {	
 
@@ -128,12 +149,19 @@ int main(int argc, char* argv[])
 				cout << "Seq Alg " << endl;
 			PrintMatrix(CSeq, size);
 		}
+
+		if (matComparison(CFox, CSeq, size))
+			cout << "Matrix identical\n" << endl;
+
 		cout << "time of parallel alg is " << (FinFoxAlg - StartFoxAlg) << endl;
 		cout << "time of seq alg is " << (FinSeqAlg - StartSeqAlg) << endl;
 		//
+
+		delete[] A, B, CSeq, CFox;
 	}
 	else
 	{
 		cout << "Error" << endl;
 	}
+
 }
